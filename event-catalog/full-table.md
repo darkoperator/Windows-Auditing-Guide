@@ -188,7 +188,7 @@ independently of `events.json`; update the JSON and re-sync this table instead.
 
 For a narrative guide organized by role, see:
 - `guides/workstation.md` – Workstation-focused monitoring
-- `guides/server.md` – Server-focused monitoring
+- `guides/server-baseline.md` – Server-focused monitoring
 - `guides/domain-controller.md` – Domain controller monitoring
 - `guides/certificate-authority.md` – Certificate Authority monitoring
 
