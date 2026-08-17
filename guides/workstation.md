@@ -43,6 +43,8 @@ This tier is what makes object-access events (4656/4658/4663/4657/5140/5145), DP
 
 The corresponding `Tier = advanced` row in [`settings/registry-settings.csv`](../settings/registry-settings.csv) for this role enables PowerShell Transcription (`EnableTranscripting`) — optional, and only useful if you also configure an `OutputDirectory` to centralize the transcript files; otherwise they sit locally on each workstation.
 
+Two more subcategories worth calling out that this repo's CSVs don't cover, both discussed elsewhere in this guide: the `Other Object Access Events` subcategory (Object Access — needed for scheduled-task events 4698-4702, referenced in the event table and role-specific notes below) isn't included in the CSVs above — enable it manually if you want this coverage: `auditpol /set /subcategory:"Other Object Access Events" /success:enable /failure:enable`. Likewise, the `Audit PNP Activity` subcategory (Detailed Tracking — needed for device-installation events 6416, 6419-6424, also referenced below) isn't included either: `auditpol /set /subcategory:"Audit PNP Activity" /success:enable /failure:enable`. The `Filtering Platform Connection` subcategory (Object Access — needed for event 5156, allowed-connection logging shown in the event table) is likewise not in the CSVs: `auditpol /set /subcategory:"Filtering Platform Connection" /success:enable /failure:enable`.
+
 ## Event table
 
 Every event in [`event-catalog/events.json`](../event-catalog/events.json) whose `applicableRoles` includes `workstation`, sorted by Event ID. See [`event-catalog/full-table.md`](../event-catalog/full-table.md) for the complete cross-role catalog.

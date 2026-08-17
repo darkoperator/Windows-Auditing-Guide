@@ -47,6 +47,8 @@ The corresponding `Tier = advanced` row in [`settings/registry-settings.csv`](..
 
 Beyond what `auditpol` and the registry rows above cover, the original server GPO configuration guide also calls out hardening WinRM (disabling Basic/CredSSP/unencrypted-traffic, requiring channel-binding token hardening) and RDS Session Host settings (Network Level Authentication, high encryption level) — those are remote-management/RDP hardening controls rather than audit-logging settings, so they're out of scope for this settings-data-driven guide, but worth applying alongside the audit policy above on any server that accepts inbound WinRM or RDP.
 
+A few subcategories the CSVs above don't cover are also worth calling out, since events referencing them appear in the event table below: the `Other Object Access Events` subcategory (Object Access — needed for scheduled-task events 4698-4702) isn't included in the CSVs above — enable it manually if you want this coverage: `auditpol /set /subcategory:"Other Object Access Events" /success:enable /failure:enable`. The `Audit PNP Activity` subcategory (Detailed Tracking — needed for device-recognition event 6416) is likewise absent: `auditpol /set /subcategory:"Audit PNP Activity" /success:enable /failure:enable`. And the `Filtering Platform Connection` subcategory (Object Access — needed for event 5156) isn't covered either: `auditpol /set /subcategory:"Filtering Platform Connection" /success:enable /failure:enable`.
+
 ## Event table
 
 Every event in [`event-catalog/events.json`](../event-catalog/events.json) whose `applicableRoles` includes `server`, sorted by Event ID. See [`event-catalog/full-table.md`](../event-catalog/full-table.md) for the complete cross-role catalog.

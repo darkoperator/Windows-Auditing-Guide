@@ -46,6 +46,8 @@ This is the same 12-subcategory advanced layer used in the workstation and serve
 
 The corresponding `Tier = advanced` row in [`settings/registry-settings.csv`](../settings/registry-settings.csv) for this role enables PowerShell Transcription (`EnableTranscripting`) — optional, and only useful if you also configure an `OutputDirectory` to centralize the transcript files; otherwise they sit locally on each DC.
 
+A handful of subcategories the CSVs above don't cover are also worth calling out, since the events they gate appear in the event table below: the `Other Object Access Events` subcategory (Object Access — needed for scheduled-task events 4698-4702) isn't included in the CSVs above — enable it manually if you want this coverage: `auditpol /set /subcategory:"Other Object Access Events" /success:enable /failure:enable`. The `Filtering Platform Connection` subcategory (Object Access — needed for events 5156/5157, allowed/blocked connection logging) isn't covered either: `auditpol /set /subcategory:"Filtering Platform Connection" /success:enable /failure:enable`. Nor is `Filtering Platform Packet Drop` (Object Access — needed for events 5152/5153/5155, dropped-packet logging): `auditpol /set /subcategory:"Filtering Platform Packet Drop" /success:enable /failure:enable`.
+
 ## Event table
 
 Every event in [`event-catalog/events.json`](../event-catalog/events.json) whose `applicableRoles` includes `domain-controller`, sorted by Event ID. See [`event-catalog/full-table.md`](../event-catalog/full-table.md) for the complete cross-role catalog.
