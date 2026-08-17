@@ -45,7 +45,7 @@ This is the same 12-subcategory advanced layer used in the other three guides. N
 
 The corresponding `Tier = advanced` row in [`settings/registry-settings.csv`](../settings/registry-settings.csv) for this role enables PowerShell Transcription (`EnableTranscripting`) — optional, and only useful if you also configure an `OutputDirectory` to centralize the transcript files; otherwise they sit locally on each CA.
 
-**CA-specific audit filter (not an `auditpol` or registry setting, so it's documented here rather than in `settings/`).** The Certificate Authority service has its own, separate audit filter that gates whether it emits the 4868–4898 security-log events at all, independent of the OS-level `Certification Services` subcategory above — both gates have to be open. `Certificate Authority Server Security Event Logging GPO Configuration Guide.md`'s "Certificate Services Operations" section lists all seven CA audit categories as `Success and Failure`:
+**CA-specific audit filter (not an `auditpol` or registry setting, so it's documented here rather than in `settings/`).** The Certificate Authority service has its own, separate audit filter that gates whether it emits the 4868–4898 security-log events at all, independent of the OS-level `Certification Services` subcategory above — both gates have to be open. `Certificate Authority Server Security Event Logging GPO Configuration Guide.md`'s "Certificate Services Operations" section lists nine enabled categories as `Success and Failure`; seven of these map to real `CA\AuditFilter` bits (the other two — "Certificate Manager Settings" and generic "Certificate Services" — aren't part of the bitmask, so they're not listed below):
 
 - Start and Stop Certificate Services (bit 1)
 - Backup and Restore CA Database (bit 2)
@@ -55,7 +55,7 @@ The corresponding `Tier = advanced` row in [`settings/registry-settings.csv`](..
 - Change CA Security Settings (bit 32)
 - Change CA Configuration (bit 64)
 
-Summed, that's an audit filter value of **127** (all seven bits set), applied with:
+Neither source file states a numeric `AuditFilter` value directly. **127** (0x7F) is the standard Microsoft `CA\AuditFilter` bitmask sum for these seven categories (1+2+4+8+16+32+64) — derived here from that well-known bitmask scheme, not quoted from either source document. Applied with:
 
 ```
 certutil -setreg CA\AuditFilter 127
