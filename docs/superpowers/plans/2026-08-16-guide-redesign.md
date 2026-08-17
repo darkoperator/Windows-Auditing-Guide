@@ -102,9 +102,11 @@ Source files being migrated (all in repo root, read in full during brainstorming
   - `description`: use the Master table's wording where the event appears there; otherwise use the wording from whichever guide it came from.
   - `criticality`: if the same event has different criticality across files (this happens — e.g. 4740 is "High" in the Master table but check each source), prefer the **higher** criticality value (High > Medium > Low).
   - `mitre`: union of all MITRE entries seen for that event ID across all source files, deduplicated by technique ID. Parse the MITRE column format `T1234 - Technique Name` (and `T1234.005 - Sub-technique Name`) into `{"id": "T1234", "name": "Technique Name"}` objects.
-  - `applicableRoles`: determine from which source guide(s) the event appears in — e.g. an event in both `Windows Workstation Event ID Collection Guide.md` and `Windows Server Baseline Event ID Collection Guide.md` gets `["workstation", "server"]`. An event that appears in the Master table with `Applicable To` = "All" gets `["workstation", "server", "domain-controller", "certificate-authority"]`. An event only in the CA guide gets `["certificate-authority"]` only (note: the CA guide's own `applicableRoles` isn't listed in the file structure section above as a fifth source — read `Active Directory Certificate Authority Event ID Collection Guide.md` directly for its event list even though it wasn't in the five bullet list; it's needed to correctly scope CA-only events like 4868–4898 and the `Microsoft-Windows-CertificationAuthority` events 3–40).
+  - `applicableRoles`: determine from which source guide(s) the event appears in — e.g. an event in both `Windows Workstation Event ID Collection Guide.md` and `Windows Server Baseline Event ID Collection Guide.md` gets `["workstation", "server"]`. An event that appears in the Master table with `Applicable To` = "All" gets `["workstation", "server", "domain-controller", "certificate-authority"]`. An event only in the CA guide gets `["certificate-authority"]` only (note: the CA guide's own `applicableRoles` isn't listed in the file structure section above as a fifth source — read `Active Directory Certificate Authority Event ID Collection Guide.md` directly for its event list even though it wasn't in the five bullet list; it's needed to correctly scope CA-only events like 4868–4898).
   - `requiredSubcategory`: leave as an empty string `""` for every record. This field is reserved for a future pass that maps each event to its governing `auditpol` subcategory using Microsoft's authoritative event-to-subcategory reference — no task in this plan populates it, and no role guide displays it. Do not attempt to fill it in from memory or inference.
   - `schema`: `null`.
+
+  **Exclusion — `Microsoft-Windows-CertificationAuthority` diagnostic channel (event IDs 3-40 from `Active Directory Certificate Authority Event ID Collection Guide.md`'s "Microsoft-Windows-CertificationAuthority Events" section):** do NOT include these in `events.json`. Windows event IDs are only unique within a given log channel, not globally, and these low numbers (3-40) collide with unrelated real events already in the catalog from other channels (e.g. ID 21 is both "RDP Session Logon Succeeded" in `Terminal-Services-LocalSessionManager/Operational` and "Services could not initialize exit module" in this CA channel). Since `events.json` keys solely on `eventId` with no per-channel component, both can't be represented as separate records. All 38 of these events (not just the colliding ones, for consistency) are excluded from `events.json` entirely and instead get a dedicated table sourced directly from the CA guide in `guides/certificate-authority.md` (see Task 11) — no data is lost, it just isn't a good fit for a globally-keyed catalog. The CA guide's other section, "Security Log Events" (4868-4898), has no such collision and is included in `events.json` normally.
 
   Write the result as a JSON array to `event-catalog/events.json`, pretty-printed with 2-space indentation, sorted ascending by `eventId`.
 
@@ -132,7 +134,7 @@ Source files being migrated (all in repo root, read in full during brainstorming
   print(f'{len(data)} unique events, all valid')
   "
   ```
-  Expected: prints a count with no assertion errors. The count should be roughly 90-110 (the five source files have real overlap; expect meaningfully fewer unique IDs than the sum of all rows across files).
+  Expected: prints a count with no assertion errors. The count should be meaningfully fewer than the sum of all rows across the five files (real overlap exists, e.g. event 4624 appears in four of the five files as one record) — do not target a specific number; a large fraction of events are genuinely single-guide-only (Defender, WMI, firewall-driver, USB/device sub-events, etc.) and inflate the true unique count well above what naive overlap-only estimates suggest.
 
 - [ ] **Step 4: Commit**
 
@@ -584,9 +586,23 @@ Source files being migrated (all in repo root, read in full during brainstorming
 
   Same five sections, scoped to AD Certificate Services (CA) servers, sourced from `certificate-authority-baseline.csv`/`certificate-authority-advanced.csv`/`registry-settings.csv`. For CA-specific settings not covered by `auditpol` (the CA's own audit filter, configured via `certutil -setreg CA\AuditFilter` or the CA MMC snap-in's Auditing tab), read `Certificate Authority Server Security Event Logging GPO Configuration Guide.md` for the exact recommended filter value and document it narratively in this section (not in a CSV — it's CA-specific, not a `auditpol`/registry setting, so it stays out of `settings/` per the data model). Role-specific notes come from `Active Directory Certificate Authority Event ID Collection Guide.md`'s "Key Monitoring Scenarios" section.
 
-- [ ] **Step 2: Verify the event table matches events.json**
+  The "Event table" section (§4 of the template) has an extra part for this guide only: after the table filtered from `events.json`, add a second subsection titled "CertificationAuthority diagnostic events" with its own table listing all 38 events (IDs 3-40) from `Active Directory Certificate Authority Event ID Collection Guide.md`'s "Microsoft-Windows-CertificationAuthority Events" section, transcribed directly from that source file (columns: Event ID, Description, Criticality, MITRE Technique IDs — same as the source table). Add one sentence above it explaining why these live here instead of in `events.json`: their IDs (3-40) are only unique within the `Microsoft-Windows-CertificationAuthority` channel and collide with unrelated events from other channels elsewhere in this guide (e.g. ID 21 is also "RDP Session Logon Succeeded" in the Terminal-Services channel), so they're kept as this channel's own table rather than forced into the shared catalog.
 
-  Same verification pattern as Task 8 Step 2, filtered on `'certificate-authority' in d['applicableRoles']` and checked against `guides/certificate-authority.md`.
+- [ ] **Step 2: Verify the event table matches events.json, and the diagnostic table matches its source**
+
+  Run the same verification pattern as Task 8 Step 2 (filtered on `'certificate-authority' in d['applicableRoles']`) against the *first* table only. Then separately verify the CertificationAuthority diagnostic table has exactly 38 rows and its Event ID values are exactly `3-40` inclusive:
+  ```bash
+  python3 -c "
+  import re
+  content = open('guides/certificate-authority.md').read()
+  # isolate the diagnostic table section only
+  section = content.split('CertificationAuthority diagnostic events')[1]
+  ids = sorted(int(x) for x in re.findall(r'^\| (\d+) \|', section, re.MULTILINE))
+  assert ids == list(range(3, 41)), f'expected 3-40, got {ids}'
+  print(f'{len(ids)} diagnostic events present, IDs 3-40 exactly')
+  "
+  ```
+  Expected: `38 diagnostic events present, IDs 3-40 exactly`.
 
 - [ ] **Step 3: Commit**
 
@@ -825,3 +841,4 @@ Source files being migrated (all in repo root, read in full during brainstorming
 - **Sysmon boundary:** Task 15 explicitly restates the "no deployment content" constraint inline so it can't be missed even if this task is executed by a fresh subagent with no other context.
 - **Ordering:** Tasks 1-3 (event catalog) and 4-7 (settings) have no dependency on each other and could run in parallel; Tasks 8-11 (role guides) depend on both; Tasks 12-15 (collection docs) are independent of 1-11; Task 16 depends on all prior tasks; Task 17 must run last.
 - **`requiredSubcategory` deferred:** flagged during the pre-flight conflict scan — Task 1 originally claimed Task 4/5 would populate this field, but neither task writes to `events.json`. Resolved by leaving it `""` for all records in this pass; no task or role guide depends on it being populated.
+- **CertificationAuthority channel ID collisions:** flagged by Task 1's implementer during execution — the CA guide's low-numbered `Microsoft-Windows-CertificationAuthority` diagnostic events (3-40) collide with unrelated events from other channels under a global `eventId`-only key. Resolved by excluding all 38 from `events.json` and giving them a dedicated table in `guides/certificate-authority.md` (Task 11) instead, sourced directly from the original CA guide. No event data is lost.
