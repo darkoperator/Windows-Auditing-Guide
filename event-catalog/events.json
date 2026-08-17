@@ -1,0 +1,3627 @@
+[
+  {
+    "eventId": 3,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Request failed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Request did not contain template name",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not initialize",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services issued a certificate",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services denied request",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 8,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "Error accessing object path",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 9,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not create key container",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 10,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services failed to archive private key",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 11,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "Error starting WMI service",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 12,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not get container",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 13,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services template missing",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 14,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not find request file",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 15,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services did not start",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 16,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not read request file",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 17,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not open request file",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 18,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services policy module error",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 19,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "WMI subscription error",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 20,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "WMI subscription error",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 21,
+    "logSource": "Terminal-Services-LocalSessionManager/Operational",
+    "description": "RDP Session Logon Succeeded",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 22,
+    "logSource": "Terminal-Services-LocalSessionManager/Operational",
+    "description": "RDP Shell Start Notification",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 23,
+    "logSource": "Terminal-Services-LocalSessionManager/Operational",
+    "description": "RDP Session Logoff",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 24,
+    "logSource": "Terminal-Services-LocalSessionManager/Operational",
+    "description": "RDP Session Disconnected",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 25,
+    "logSource": "Terminal-Services-LocalSessionManager/Operational",
+    "description": "RDP Session Reconnected",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 26,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not find key archival certificate",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 27,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not archive private key",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 28,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not create key archival hash",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 29,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not create key archival certificate",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 30,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not archive private key",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 31,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not process request",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 32,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not sign request",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 33,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not sign request (error)",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 34,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not create certificate",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 35,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not open registry key",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 36,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not read registry value",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 37,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not write registry value",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 38,
+    "logSource": "Microsoft-Windows-CertificationAuthority",
+    "description": "Services could not get subject name",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 39,
+    "logSource": "Terminal-Services-LocalSessionManager/Operational",
+    "description": "RDP Session Disconnected by Admin",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 40,
+    "logSource": "Terminal-Services-LocalSessionManager/Operational",
+    "description": "RDP Session Disconnected by Reason Code",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 131,
+    "logSource": "Terminal-Services-RemoteConnectionManager/Operational",
+    "description": "RDP Connection Attempt",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 140,
+    "logSource": "Terminal-Services-RemoteConnectionManager/Operational",
+    "description": "RDP Connection Succeeded",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 403,
+    "logSource": "Windows PowerShell",
+    "description": "PowerShell engine lifecycle",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1000,
+    "logSource": "Application",
+    "description": "Application crash",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1546",
+        "name": "Event Triggered Execution"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1002,
+    "logSource": "Application",
+    "description": "Application hang",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1546",
+        "name": "Event Triggered Execution"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1006,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Malware detected",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1007,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Malware remediation",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1008,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Malware failed remediation",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1015,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Suspicious behavior detection",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1100,
+    "logSource": "Security",
+    "description": "Event logging service shut down",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.002",
+        "name": "Disable Windows Event Logging"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1102,
+    "logSource": "Security",
+    "description": "Audit log cleared",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1070.001",
+        "name": "Clear Windows Event Logs"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1104,
+    "logSource": "Security",
+    "description": "Security log full",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.002",
+        "name": "Disable Windows Event Logging"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1116,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Detection source",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1117,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "AV component started",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562.001",
+        "name": "Disable or Modify Tools"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1118,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "AV component stopped",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.001",
+        "name": "Disable or Modify Tools"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 1149,
+    "logSource": "Terminal-Services-RemoteConnectionManager/Operational",
+    "description": "User authentication succeeded",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 2003,
+    "logSource": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+    "description": "Firewall rule added",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 2004,
+    "logSource": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+    "description": "Firewall rule modified",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 2005,
+    "logSource": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+    "description": "Firewall rule deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 2006,
+    "logSource": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+    "description": "Firewall rule group added",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 2033,
+    "logSource": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+    "description": "Firewall driver started",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 2034,
+    "logSource": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+    "description": "Firewall driver stopped",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4103,
+    "logSource": "Microsoft-Windows-PowerShell/Operational",
+    "description": "Module logging",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4104,
+    "logSource": "Microsoft-Windows-PowerShell/Operational",
+    "description": "Script block logging",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4624,
+    "logSource": "Security",
+    "description": "Successful account logon",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4625,
+    "logSource": "Security",
+    "description": "Failed account logon",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1110",
+        "name": "Brute Force"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4634,
+    "logSource": "Security",
+    "description": "Account logoff",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4647,
+    "logSource": "Security",
+    "description": "User initiated logoff",
+    "criticality": "Low",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4648,
+    "logSource": "Security",
+    "description": "Logon with explicit credentials",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      },
+      {
+        "id": "T1550.002",
+        "name": "Pass the Hash"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4656,
+    "logSource": "Security",
+    "description": "Handle to an object requested",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1003.001",
+        "name": "LSASS Memory"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4657,
+    "logSource": "Security",
+    "description": "Registry value modified",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1112",
+        "name": "Modify Registry"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4658,
+    "logSource": "Security",
+    "description": "Handle to object closed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1003.001",
+        "name": "LSASS Memory"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4660,
+    "logSource": "Security",
+    "description": "Object deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1485",
+        "name": "Data Destruction"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4662,
+    "logSource": "Directory Service",
+    "description": "Operation performed on Active Directory object",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1087.002",
+        "name": "Domain Account Discovery"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4663,
+    "logSource": "Security",
+    "description": "Object access attempt",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1003.001",
+        "name": "LSASS Memory"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4670,
+    "logSource": "Security",
+    "description": "Permissions on object changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1222",
+        "name": "File and Directory Permissions Modification"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4672,
+    "logSource": "Security",
+    "description": "Special privileges assigned to new logon",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      },
+      {
+        "id": "T1078.003",
+        "name": "Local Accounts"
+      },
+      {
+        "id": "T1548",
+        "name": "Abuse Elevation Control Mechanism"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4688,
+    "logSource": "Security",
+    "description": "Process creation",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1059",
+        "name": "Command and Scripting Interpreter"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4689,
+    "logSource": "Security",
+    "description": "Process termination",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1059",
+        "name": "Command and Scripting Interpreter"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4696,
+    "logSource": "Security",
+    "description": "Primary token assigned to process",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1134",
+        "name": "Access Token Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4697,
+    "logSource": "Security",
+    "description": "Service installation",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4698,
+    "logSource": "Security",
+    "description": "Scheduled task created",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4699,
+    "logSource": "Security",
+    "description": "Scheduled task deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4700,
+    "logSource": "Security",
+    "description": "Scheduled task enabled",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4701,
+    "logSource": "Security",
+    "description": "Scheduled task disabled",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4702,
+    "logSource": "Security",
+    "description": "Scheduled task updated",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4719,
+    "logSource": "Security",
+    "description": "System audit policy changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.002",
+        "name": "Disable Windows Event Logging"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4720,
+    "logSource": "Security",
+    "description": "User account created",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1136",
+        "name": "Create Account"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4722,
+    "logSource": "Security",
+    "description": "User account enabled",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4723,
+    "logSource": "Security",
+    "description": "Password change attempt",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4724,
+    "logSource": "Security",
+    "description": "Password reset attempt",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4725,
+    "logSource": "Security",
+    "description": "User account disabled",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4726,
+    "logSource": "Security",
+    "description": "User account deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1531",
+        "name": "Account Access Removal"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4728,
+    "logSource": "Security",
+    "description": "Member added to security-enabled global group",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4729,
+    "logSource": "Security",
+    "description": "Member removed from security-enabled global group",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4732,
+    "logSource": "Security",
+    "description": "Member added to security-enabled local group",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4733,
+    "logSource": "Security",
+    "description": "Member removed from security-enabled local group",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4738,
+    "logSource": "Security",
+    "description": "User account changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4740,
+    "logSource": "Security",
+    "description": "User account locked out",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1110",
+        "name": "Brute Force"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4756,
+    "logSource": "Security",
+    "description": "Member added to security-enabled universal group",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4757,
+    "logSource": "Security",
+    "description": "Member removed from security-enabled universal group",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4767,
+    "logSource": "Security",
+    "description": "User account unlocked",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      },
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4768,
+    "logSource": "Security",
+    "description": "Kerberos TGT requested",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1558.003",
+        "name": "Kerberoasting"
+      }
+    ],
+    "applicableRoles": [
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4769,
+    "logSource": "Security",
+    "description": "Kerberos service ticket requested",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1558.003",
+        "name": "Kerberoasting"
+      }
+    ],
+    "applicableRoles": [
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4771,
+    "logSource": "Security",
+    "description": "Kerberos pre-authentication failed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1110",
+        "name": "Brute Force"
+      }
+    ],
+    "applicableRoles": [
+      "server",
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4776,
+    "logSource": "Security",
+    "description": "Credential validation",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1110",
+        "name": "Brute Force"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4778,
+    "logSource": "Security",
+    "description": "Session reconnected to window station",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4779,
+    "logSource": "Security",
+    "description": "Session disconnected from window station",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Desktop Protocol"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4794,
+    "logSource": "Security",
+    "description": "Directory Services Restore Mode admin password set",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4800,
+    "logSource": "Security",
+    "description": "Workstation locked",
+    "criticality": "Low",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4801,
+    "logSource": "Security",
+    "description": "Workstation unlocked",
+    "criticality": "Low",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4802,
+    "logSource": "Security",
+    "description": "Screen saver invoked",
+    "criticality": "Low",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4803,
+    "logSource": "Security",
+    "description": "Screen saver dismissed",
+    "criticality": "Low",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4868,
+    "logSource": "Security",
+    "description": "Certificate Manager denied certificate request",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4869,
+    "logSource": "Security",
+    "description": "Certificate Services received resubmitted request",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4870,
+    "logSource": "Security",
+    "description": "Certificate Services revoked certificate",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4871,
+    "logSource": "Security",
+    "description": "Certificate Services received a request to publish CRL",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4872,
+    "logSource": "Security",
+    "description": "Certificate Services published the CA certificate to AD DS",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4873,
+    "logSource": "Security",
+    "description": "Certificate request extension changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4874,
+    "logSource": "Security",
+    "description": "One or more certificate request attributes changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4875,
+    "logSource": "Security",
+    "description": "Certificate Services received a request to shut down",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4876,
+    "logSource": "Security",
+    "description": "Certificate Services backup started",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4877,
+    "logSource": "Security",
+    "description": "Certificate Services backup completed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4878,
+    "logSource": "Security",
+    "description": "Certificate Services restore started",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4879,
+    "logSource": "Security",
+    "description": "Certificate Services restore completed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4880,
+    "logSource": "Security",
+    "description": "Certificate Services started",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4881,
+    "logSource": "Security",
+    "description": "Certificate Services stopped",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4882,
+    "logSource": "Security",
+    "description": "Security permissions on CA changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1222",
+        "name": "File and Directory Permissions Modification"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4883,
+    "logSource": "Security",
+    "description": "Certificate Services retrieved an archived key",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4884,
+    "logSource": "Security",
+    "description": "Certificate Services imported a certificate into its database",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4885,
+    "logSource": "Security",
+    "description": "Audit filter for Certificate Services changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.002",
+        "name": "Disable Windows Event Logging"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4886,
+    "logSource": "Security",
+    "description": "Certificate Services received a certificate request",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4887,
+    "logSource": "Security",
+    "description": "Certificate issued",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4888,
+    "logSource": "Security",
+    "description": "Certificate request denied",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4889,
+    "logSource": "Security",
+    "description": "Certificate Services set the status of a certificate request to pending",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4890,
+    "logSource": "Security",
+    "description": "Certificate Manager settings changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4891,
+    "logSource": "Security",
+    "description": "Configuration entry changed in Certificate Services",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4892,
+    "logSource": "Security",
+    "description": "Property of Certificate Services changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4893,
+    "logSource": "Security",
+    "description": "Certificate Services archived a key",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4894,
+    "logSource": "Security",
+    "description": "Certificate Services imported and archived a key",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4895,
+    "logSource": "Security",
+    "description": "Certificate Services published CA certificate to AD DS",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4896,
+    "logSource": "Security",
+    "description": "Certificate Services database row deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1485",
+        "name": "Data Destruction"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4897,
+    "logSource": "Security",
+    "description": "Role separation enabled",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1548",
+        "name": "Abuse Elevation Control Mechanism"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4898,
+    "logSource": "Security",
+    "description": "Certificate Services loaded a template",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1552.004",
+        "name": "Private Keys"
+      }
+    ],
+    "applicableRoles": [
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4905,
+    "logSource": "Security",
+    "description": "Security event source unregistered",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.002",
+        "name": "Disable Windows Event Logging"
+      }
+    ],
+    "applicableRoles": [
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4907,
+    "logSource": "Security",
+    "description": "Auditing settings changed on object",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.002",
+        "name": "Disable Windows Event Logging"
+      }
+    ],
+    "applicableRoles": [
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4912,
+    "logSource": "Security",
+    "description": "Per-user audit policy changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.002",
+        "name": "Disable Windows Event Logging"
+      }
+    ],
+    "applicableRoles": [
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4946,
+    "logSource": "Security",
+    "description": "Firewall rule added",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4947,
+    "logSource": "Security",
+    "description": "Firewall rule modified",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4948,
+    "logSource": "Security",
+    "description": "Firewall rule deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4950,
+    "logSource": "Security",
+    "description": "Windows Firewall settings changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4954,
+    "logSource": "Security",
+    "description": "Group policy settings for Windows Firewall changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4956,
+    "logSource": "Security",
+    "description": "Windows Firewall active profile changed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 4964,
+    "logSource": "Security",
+    "description": "Special groups assigned to new logon",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5001,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Real-time protection disabled",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.001",
+        "name": "Disable or Modify Tools"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5004,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Real-time protection configuration changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.001",
+        "name": "Disable or Modify Tools"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5007,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Antimalware platform configuration changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.001",
+        "name": "Disable or Modify Tools"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5010,
+    "logSource": "Microsoft-Windows-Windows Defender/Operational",
+    "description": "Scanning disabled by tamper protection",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.001",
+        "name": "Disable or Modify Tools"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5024,
+    "logSource": "Security",
+    "description": "Windows Firewall service started",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5025,
+    "logSource": "Security",
+    "description": "Windows Firewall service stopped",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5031,
+    "logSource": "Security",
+    "description": "Application blocked from accepting incoming connections",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5136,
+    "logSource": "Directory Service",
+    "description": "Directory Service object modified",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1484",
+        "name": "Domain Policy Modification"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5137,
+    "logSource": "Directory Service",
+    "description": "Directory Service object created",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1484",
+        "name": "Domain Policy Modification"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5138,
+    "logSource": "Directory Service",
+    "description": "Directory Service object undeleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1484",
+        "name": "Domain Policy Modification"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5139,
+    "logSource": "Directory Service",
+    "description": "Directory Service object moved",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1484",
+        "name": "Domain Policy Modification"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5140,
+    "logSource": "Security",
+    "description": "Network share accessed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5141,
+    "logSource": "Directory Service",
+    "description": "Directory Service object deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1484",
+        "name": "Domain Policy Modification"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5142,
+    "logSource": "Security",
+    "description": "Network share object added",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5143,
+    "logSource": "Security",
+    "description": "Network share object modified",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      }
+    ],
+    "applicableRoles": [
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5144,
+    "logSource": "Security",
+    "description": "Network share object deleted",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      }
+    ],
+    "applicableRoles": [
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5145,
+    "logSource": "Security",
+    "description": "Network share object checked",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5152,
+    "logSource": "Security",
+    "description": "Network packet blocked by Windows Filtering Platform",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5153,
+    "logSource": "Security",
+    "description": "A more restrictive Windows Filtering Platform filter blocked a packet",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5155,
+    "logSource": "Security",
+    "description": "Windows Filtering Platform blocked an application from listening on a port",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5156,
+    "logSource": "Security",
+    "description": "Windows Filtering Platform allowed connection",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      },
+      {
+        "id": "T1562.004",
+        "name": "Disable or Modify Firewall Rules"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5157,
+    "logSource": "Security",
+    "description": "Windows Filtering Platform blocked a connection",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562.004",
+        "name": "Disable/Modify Firewall"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5857,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "WMI Activity - Provider Started",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5858,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "WMI Activity - Provider Error",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5859,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "WMI Activity - Provider Disabled",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5860,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "WMI Activity - Consumer Error",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 5861,
+    "logSource": "Microsoft-Windows-WMI-Activity/Operational",
+    "description": "WMI Activity - Consumer Warning",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6005,
+    "logSource": "System",
+    "description": "Event log service started",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6006,
+    "logSource": "System",
+    "description": "Event log service stopped",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "domain-controller"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6416,
+    "logSource": "Security",
+    "description": "A new external device was recognized",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1200",
+        "name": "Hardware Additions"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6419,
+    "logSource": "Security",
+    "description": "Device installation request",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1200",
+        "name": "Hardware Additions"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6420,
+    "logSource": "Security",
+    "description": "Device disabled",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1200",
+        "name": "Hardware Additions"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6421,
+    "logSource": "Security",
+    "description": "Device installation allowed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1200",
+        "name": "Hardware Additions"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6422,
+    "logSource": "Security",
+    "description": "Device install enabled",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1200",
+        "name": "Hardware Additions"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6423,
+    "logSource": "Security",
+    "description": "Installation forbidden by policy",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1200",
+        "name": "Hardware Additions"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 6424,
+    "logSource": "Security",
+    "description": "Device installation allowed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1200",
+        "name": "Hardware Additions"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7022,
+    "logSource": "System",
+    "description": "Service hung on starting",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7023,
+    "logSource": "System",
+    "description": "Service terminated with error",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7024,
+    "logSource": "System",
+    "description": "Service terminated with error",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7026,
+    "logSource": "System",
+    "description": "Service crashed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7031,
+    "logSource": "System",
+    "description": "Service crashed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7034,
+    "logSource": "System",
+    "description": "Service crashed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7040,
+    "logSource": "System",
+    "description": "Service start type changed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      },
+      {
+        "id": "T1562",
+        "name": "Impair Defenses"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 7045,
+    "logSource": "System",
+    "description": "New service installed",
+    "criticality": "High",
+    "mitre": [
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      }
+    ],
+    "applicableRoles": [
+      "workstation",
+      "server",
+      "domain-controller",
+      "certificate-authority"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 11707,
+    "logSource": "Application",
+    "description": "Install completed successfully",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1204",
+        "name": "User Execution"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 11708,
+    "logSource": "Application",
+    "description": "Install failed",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1204",
+        "name": "User Execution"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  },
+  {
+    "eventId": 11724,
+    "logSource": "Application",
+    "description": "Application removal",
+    "criticality": "Medium",
+    "mitre": [
+      {
+        "id": "T1204",
+        "name": "User Execution"
+      }
+    ],
+    "applicableRoles": [
+      "workstation"
+    ],
+    "requiredSubcategory": "",
+    "schema": null
+  }
+]
