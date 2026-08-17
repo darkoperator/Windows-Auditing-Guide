@@ -85,7 +85,7 @@ Source files being migrated (all in repo root, read in full during brainstorming
     "criticality": "High",
     "mitre": [{"id": "T1059", "name": "Command and Scripting Interpreter"}],
     "applicableRoles": ["workstation", "server", "domain-controller", "certificate-authority"],
-    "requiredSubcategory": "Detailed Tracking > Process Creation",
+    "requiredSubcategory": "",
     "schema": null
   }
   ```
@@ -103,7 +103,7 @@ Source files being migrated (all in repo root, read in full during brainstorming
   - `criticality`: if the same event has different criticality across files (this happens — e.g. 4740 is "High" in the Master table but check each source), prefer the **higher** criticality value (High > Medium > Low).
   - `mitre`: union of all MITRE entries seen for that event ID across all source files, deduplicated by technique ID. Parse the MITRE column format `T1234 - Technique Name` (and `T1234.005 - Sub-technique Name`) into `{"id": "T1234", "name": "Technique Name"}` objects.
   - `applicableRoles`: determine from which source guide(s) the event appears in — e.g. an event in both `Windows Workstation Event ID Collection Guide.md` and `Windows Server Baseline Event ID Collection Guide.md` gets `["workstation", "server"]`. An event that appears in the Master table with `Applicable To` = "All" gets `["workstation", "server", "domain-controller", "certificate-authority"]`. An event only in the CA guide gets `["certificate-authority"]` only (note: the CA guide's own `applicableRoles` isn't listed in the file structure section above as a fifth source — read `Active Directory Certificate Authority Event ID Collection Guide.md` directly for its event list even though it wasn't in the five bullet list; it's needed to correctly scope CA-only events like 4868–4898 and the `Microsoft-Windows-CertificationAuthority` events 3–40).
-  - `requiredSubcategory`: leave as an empty string `""` for this task — Task 4/5 fills this in when the settings CSVs are built and the subcategory-to-event mapping becomes concrete. (This avoids guessing subcategory names now and getting them wrong later.)
+  - `requiredSubcategory`: leave as an empty string `""` for every record. This field is reserved for a future pass that maps each event to its governing `auditpol` subcategory using Microsoft's authoritative event-to-subcategory reference — no task in this plan populates it, and no role guide displays it. Do not attempt to fill it in from memory or inference.
   - `schema`: `null`.
 
   Write the result as a JSON array to `event-catalog/events.json`, pretty-printed with 2-space indentation, sorted ascending by `eventId`.
@@ -824,3 +824,4 @@ Source files being migrated (all in repo root, read in full during brainstorming
 - **GUID/registry accuracy:** Tasks 4, 5, and 6 explicitly require WebFetch verification against Microsoft sources rather than relying on memory, per the design spec's implicit requirement that the settings data be trustworthy enough for a future PowerShell tool to apply directly.
 - **Sysmon boundary:** Task 15 explicitly restates the "no deployment content" constraint inline so it can't be missed even if this task is executed by a fresh subagent with no other context.
 - **Ordering:** Tasks 1-3 (event catalog) and 4-7 (settings) have no dependency on each other and could run in parallel; Tasks 8-11 (role guides) depend on both; Tasks 12-15 (collection docs) are independent of 1-11; Task 16 depends on all prior tasks; Task 17 must run last.
+- **`requiredSubcategory` deferred:** flagged during the pre-flight conflict scan — Task 1 originally claimed Task 4/5 would populate this field, but neither task writes to `events.json`. Resolved by leaving it `""` for all records in this pass; no task or role guide depends on it being populated.
