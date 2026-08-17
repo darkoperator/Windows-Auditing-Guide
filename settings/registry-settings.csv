@@ -1,0 +1,13 @@
+Role,Tier,Hive,KeyPath,ValueName,Type,Data,Description
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\PowerShell\ModuleLogging,EnableModuleLogging,REG_DWORD,1,Enable PowerShell Module Logging
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\PowerShell\ModuleLogging\ModuleNames,*,REG_SZ,*,"Wildcard entry under the ModuleNames subkey (not a top-level value of ModuleLogging) that enables module logging for all PowerShell modules; corresponds to setting ""Module Names"" to * in the GPO"
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging,EnableScriptBlockLogging,REG_DWORD,1,Enable PowerShell Script Block Logging
+all,advanced,HKLM,SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription,EnableTranscripting,REG_DWORD,1,Enable PowerShell Transcription (optional per source guide; set an OutputDirectory value separately to centralize transcript output)
+all,baseline,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit,ProcessCreationIncludeCmdLine_Enabled,REG_DWORD,1,Include command line in process creation events (System > Audit Process Creation)
+all,baseline,HKLM,SYSTEM\CurrentControlSet\Control\Lsa,SCENoApplyLegacyAuditPolicy,REG_DWORD,1,"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings"
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\EventLog\Application,MaxSize,REG_DWORD,4194304,Maximum Application event log size in KB (4GB)
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\EventLog\Application,Retention,REG_DWORD,1,Retain old events in the Application log (do not overwrite events when the log reaches its maximum size)
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\EventLog\Security,MaxSize,REG_DWORD,4194304,Maximum Security event log size in KB (4GB)
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\EventLog\Security,Retention,REG_DWORD,1,Retain old events in the Security log (do not overwrite events when the log reaches its maximum size)
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\EventLog\System,MaxSize,REG_DWORD,4194304,Maximum System event log size in KB (4GB)
+all,baseline,HKLM,SOFTWARE\Policies\Microsoft\Windows\EventLog\System,Retention,REG_DWORD,1,Retain old events in the System log (do not overwrite events when the log reaches its maximum size)
