@@ -41,10 +41,10 @@ This sets the `Wecsvc` service to start automatically (delayed start) and starts
 The forwarding plugin on each source computer runs as the local `NETWORK SERVICE` account, and by default that account does not have read access to the Security log (only `Event Log Readers`, `Administrators`, and `SYSTEM` do). Since most subscriptions of interest pull from the Security channel, grant `NETWORK SERVICE` explicit read access on **every source computer** (this is most easily done once via the same GPO or script that deploys the rest of your audit configuration):
 
 ```powershell
-wevtutil sl Security /ca:O:BAG:SYD:(A;;0x1;;;SY)(A;;0x5;;;BA)(A;;0x1;;;LA)(A;;0x1;;;NS)
+wevtutil sl Security /ca:O:BAG:SYD:(A;;0xf0005;;;SY)(A;;0x5;;;BA)(A;;0x1;;;S-1-5-32-573)(A;;0x1;;;NS)
 ```
 
-That SDDL grants `SYSTEM` and `BUILTIN\Administrators` full/read-write control, `LOCAL SERVICE` and `NETWORK SERVICE` read (`0x1`), matching the access Microsoft documents for WEF. Run `wevtutil gl Security` first if you want to see the channel's current access descriptor before overwriting it, and confirm no local customization is being clobbered.
+This is Microsoft's published reference SDDL for granting WEF forwarding read access to the Security log (see Microsoft's "Use Windows Event Forwarding to help with intrusion detection" guidance). It grants `SYSTEM` full control (`0xf0005`, its normal level of access on this channel — do not narrow this to read-only), `BUILTIN\Administrators` read/write (`0x5`), the built-in **Event Log Readers** group (`S-1-5-32-573`) read (`0x1`), and `NETWORK SERVICE` read (`0x1`) — the account the forwarding plugin actually runs as. Run `wevtutil gl Security` first if you want to see the channel's current access descriptor before overwriting it, and confirm no local customization is being clobbered.
 
 If a subscription only reads from logs other than Security (System, Application, the PowerShell operational logs, etc.), this step is usually unnecessary — `NETWORK SERVICE` already has read access to those by default — but Security is the common case, so treat it as a standard part of source onboarding.
 
@@ -88,7 +88,7 @@ Every subscription's `<Query>` element is exactly one of the `QueryList` blocks 
 
 ### Worked example: forwarding authentication events (source-initiated)
 
-This example forwards the **Authentication Events** query from `collection/xpath-queries.md` (`4624`, `4625`, `4634`, `4647`, `4648`, `4672`, `4768`, `4769`, `4771`, `4776`, `4778`, `4779` — successful/failed logon, logoff, explicit-credential logon, special privilege assignment, and Kerberos TGT/service-ticket/pre-auth/NTLM events) from every authorized domain computer into the collector's local `ForwardedEvents` log.
+This example forwards the **Authentication Events** query from `collection/xpath-queries.md` (`4624`, `4625`, `4634`, `4647`, `4648`, `4672`, `4768`, `4769`, `4771`, `4776`, `4778`, `4779` — successful/failed logon, logoff, explicit-credential logon, special privilege assignment, Kerberos TGT/service-ticket/pre-auth/NTLM events, and RDP/Terminal Services window-station reconnect/disconnect) from every authorized domain computer into the collector's local `ForwardedEvents` log.
 
 Save this as `forward-authentication-events.xml` and load it with `wecutil cs forward-authentication-events.xml`:
 
