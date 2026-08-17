@@ -1,6 +1,6 @@
 # settings/
 
-This directory holds the machine-readable audit configuration data for the guide. Every setting recommended in the role guides (under `guides/`) traces back to a row in one of the files here. There are two kinds of files, and they are applied with two different tools.
+This directory holds the machine-readable audit configuration data for the guide. Every `auditpol` subcategory and Administrative Templates value recommended in the role guides traces back to a row here; a few role-specific settings that don't fit either mechanism (e.g. the CA's own audit filter, WinRM/RDS hardening, a couple of Advanced Audit Policy subcategories noted as CSV gaps in the individual guides) are documented narratively in the relevant guide instead. There are two kinds of files here, and they are applied with two different tools.
 
 ## The two data files
 
