@@ -118,7 +118,7 @@ independently of `events.json`; update the JSON and re-sync this table instead.
 | 4894 | Security | Certificate Services imported and archived a key | High | T1552.004 - Private Keys | certificate-authority | No |
 | 4895 | Security | Certificate Services published CA certificate to AD DS | Medium | T1552.004 - Private Keys | certificate-authority | No |
 | 4896 | Security | Certificate Services database row deleted | High | T1485 - Data Destruction | certificate-authority | No |
-| 4897 | Security | Role separation enabled | High | T1548 - Abuse Elevation Control Mechanism | domain-controller, certificate-authority | No |
+| 4897 | Security | Role separation enabled | High | T1548 - Abuse Elevation Control Mechanism | certificate-authority | No |
 | 4898 | Security | Certificate Services loaded a template | Medium | T1552.004 - Private Keys | certificate-authority | No |
 | 4905 | Security | Security event source unregistered | High | T1562.002 - Disable Windows Event Logging | server | No |
 | 4907 | Security | Auditing settings changed on object | High | T1562.002 - Disable Windows Event Logging | server | No |

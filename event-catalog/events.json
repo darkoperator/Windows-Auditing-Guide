@@ -3247,7 +3247,6 @@
       }
     ],
     "applicableRoles": [
-      "domain-controller",
       "certificate-authority"
     ],
     "requiredSubcategory": "",
