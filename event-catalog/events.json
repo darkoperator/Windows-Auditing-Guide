@@ -397,7 +397,27 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that cleared the system security audit log."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that cleared the system security audit log."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with other events containing the same Logon ID, such as event 4624."
+        }
+      ]
+    }
   },
   {
     "eventId": 1104,
@@ -650,7 +670,119 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows 10 / Server 2016",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that reported information about the successful logon."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that reported information about the successful logon."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal Logon ID that can be used to correlate this event with other events containing the same value."
+        },
+        {
+          "name": "TargetUserSid",
+          "description": "SID of the account for which the logon was performed."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account for which the logon was performed."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the account for which the logon was performed."
+        },
+        {
+          "name": "TargetLogonId",
+          "description": "Hexadecimal Logon ID of the new logon session, usable to correlate with related events such as 4672."
+        },
+        {
+          "name": "LogonType",
+          "description": "Numeric code indicating the type of logon performed (e.g. Interactive, Network, Service, RemoteInteractive)."
+        },
+        {
+          "name": "LogonProcessName",
+          "description": "Name of the trusted logon process that was used for the logon."
+        },
+        {
+          "name": "AuthenticationPackageName",
+          "description": "Name of the authentication package used for the logon (e.g. NTLM, Kerberos, Negotiate)."
+        },
+        {
+          "name": "WorkstationName",
+          "description": "Machine name from which the logon attempt was performed."
+        },
+        {
+          "name": "LogonGuid",
+          "description": "GUID usable to correlate this event with related events such as 4769 or 4648 that share the same Logon GUID."
+        },
+        {
+          "name": "TransmittedServices",
+          "description": "List of transmitted services, populated only for Kerberos S4U logons."
+        },
+        {
+          "name": "LmPackageName",
+          "description": "Name of the LAN Manager subpackage (NTLM-family protocol) used during the logon, e.g. NTLM V1/V2/LM."
+        },
+        {
+          "name": "KeyLength",
+          "description": "Length of the NTLM Session Security key; always 0 for Kerberos."
+        },
+        {
+          "name": "ProcessId",
+          "description": "Hexadecimal process ID of the process that attempted the logon."
+        },
+        {
+          "name": "ProcessName",
+          "description": "Full path and name of the executable for the process that attempted the logon."
+        },
+        {
+          "name": "IpAddress",
+          "description": "IP address of the machine from which the logon attempt was performed."
+        },
+        {
+          "name": "IpPort",
+          "description": "Source port used for the logon attempt from a remote machine; 0 for interactive logons."
+        },
+        {
+          "name": "ImpersonationLevel",
+          "description": "Impersonation level assigned to the new logon token (Anonymous, Identification, Impersonation, or Delegation)."
+        },
+        {
+          "name": "RestrictedAdminMode",
+          "description": "Yes/No flag indicating whether the credentials were passed using Restricted Admin mode, populated only for RemoteInteractive logons."
+        },
+        {
+          "name": "TargetOutboundUserName",
+          "description": "User name used for outbound network connections; valid only for NewCredentials logon type."
+        },
+        {
+          "name": "TargetOutboundDomainName",
+          "description": "Domain for the user used for outbound network connections; valid only for NewCredentials logon type."
+        },
+        {
+          "name": "VirtualAccount",
+          "description": "Yes/No flag indicating whether the account is a virtual account such as a Managed Service Account."
+        },
+        {
+          "name": "TargetLinkedLogonId",
+          "description": "Hexadecimal Logon ID of the paired logon session, or 0x0 if none exists."
+        },
+        {
+          "name": "ElevatedToken",
+          "description": "Yes/No flag indicating whether the new logon session is elevated with administrator privileges."
+        }
+      ]
+    }
   },
   {
     "eventId": 4625,
@@ -670,7 +802,95 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that reported information about the logon failure."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that reported information about the logon failure."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal Logon ID usable to correlate this event with recent events containing the same value."
+        },
+        {
+          "name": "TargetUserSid",
+          "description": "SID of the account that was specified in the logon attempt."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account that was specified in the logon attempt."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the account specified in the logon attempt."
+        },
+        {
+          "name": "Status",
+          "description": "Hexadecimal NTSTATUS code indicating the reason the logon failed, e.g. 0xC0000234 for account locked out."
+        },
+        {
+          "name": "FailureReason",
+          "description": "Textual explanation of the Status field value, e.g. \"Account locked out\"."
+        },
+        {
+          "name": "SubStatus",
+          "description": "Additional hexadecimal status code providing more detail about the logon failure."
+        },
+        {
+          "name": "LogonType",
+          "description": "Numeric code indicating the type of logon that was attempted."
+        },
+        {
+          "name": "LogonProcessName",
+          "description": "Name of the trusted logon process that was used for the logon attempt."
+        },
+        {
+          "name": "AuthenticationPackageName",
+          "description": "Name of the authentication package used for the logon authentication process."
+        },
+        {
+          "name": "WorkstationName",
+          "description": "Machine name from which the logon attempt was performed."
+        },
+        {
+          "name": "TransmittedServices",
+          "description": "List of transmitted services, populated only if the logon was a result of a Kerberos S4U process."
+        },
+        {
+          "name": "LmPackageName",
+          "description": "Name of the LAN Manager subpackage used during the logon attempt, e.g. NTLM V1/V2/LM."
+        },
+        {
+          "name": "KeyLength",
+          "description": "Length of the NTLM Session Security key; always 0 for Kerberos."
+        },
+        {
+          "name": "ProcessId",
+          "description": "Hexadecimal process ID of the process that attempted the logon."
+        },
+        {
+          "name": "ProcessName",
+          "description": "Full path and name of the executable for the process that attempted the logon."
+        },
+        {
+          "name": "IpAddress",
+          "description": "IP address of the machine from which the logon attempt was performed."
+        },
+        {
+          "name": "IpPort",
+          "description": "Source port used for the logon attempt from a remote machine; 0 for interactive logons."
+        }
+      ]
+    }
   },
   {
     "eventId": 4634,
@@ -690,7 +910,31 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "TargetUserSid",
+          "description": "SID of the account that was logged off."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account that was logged off."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the account that was logged off."
+        },
+        {
+          "name": "TargetLogonId",
+          "description": "Hexadecimal Logon ID usable to correlate this event with related events such as the originating 4624 logon."
+        },
+        {
+          "name": "LogonType",
+          "description": "Numeric code indicating the type of logon session that was terminated."
+        }
+      ]
+    }
   },
   {
     "eventId": 4647,
@@ -734,7 +978,67 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested the new logon session with explicit credentials."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested the new logon session with explicit credentials."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal Logon ID of the subject's existing session, usable for correlation with related events."
+        },
+        {
+          "name": "LogonGuid",
+          "description": "GUID of the subject's session, usable to correlate with related events such as 4769 or 4624."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account whose credentials were used."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the account whose credentials were used."
+        },
+        {
+          "name": "TargetLogonGuid",
+          "description": "GUID of the new logon session created with the explicit credentials, usable for correlation with related events."
+        },
+        {
+          "name": "TargetServerName",
+          "description": "Name of the server on which the new process was run; has the value \"localhost\" if run locally."
+        },
+        {
+          "name": "TargetInfo",
+          "description": "Additional information about the target server."
+        },
+        {
+          "name": "ProcessId",
+          "description": "Hexadecimal process ID of the process that was run using the explicit credentials."
+        },
+        {
+          "name": "ProcessName",
+          "description": "Full path and name of the executable for the process."
+        },
+        {
+          "name": "IpAddress",
+          "description": "IP address of the machine from which the logon attempt was performed."
+        },
+        {
+          "name": "IpPort",
+          "description": "Source port used for the logon attempt from a remote machine; 0 for interactive logons."
+        }
+      ]
+    }
   },
   {
     "eventId": 4656,
@@ -855,7 +1159,63 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2012, Windows 8",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that made an attempt to access an object."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that made an attempt to access an object."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal Logon ID usable to correlate this event with recent events containing the same value."
+        },
+        {
+          "name": "ObjectServer",
+          "description": "Subsystem that generated the event; has the value \"Security\" for this event."
+        },
+        {
+          "name": "ObjectType",
+          "description": "Type of the object that was accessed during the operation, e.g. File or Key."
+        },
+        {
+          "name": "ObjectName",
+          "description": "Name and other identifying information for the object for which access was requested."
+        },
+        {
+          "name": "HandleId",
+          "description": "Hexadecimal handle to the object, usable for correlation with other events such as 4656."
+        },
+        {
+          "name": "AccessList",
+          "description": "List of access rights that were used by the subject when accessing the object."
+        },
+        {
+          "name": "AccessMask",
+          "description": "Hexadecimal mask corresponding to the access rights listed in AccessList."
+        },
+        {
+          "name": "ProcessId",
+          "description": "Hexadecimal process ID of the process that accessed the object."
+        },
+        {
+          "name": "ProcessName",
+          "description": "Full path and name of the executable for the process."
+        },
+        {
+          "name": "ResourceAttributes",
+          "description": "Attributes associated with the object, such as resource property claims; displays \"-\" if not applicable."
+        }
+      ]
+    }
   },
   {
     "eventId": 4670,
@@ -875,7 +1235,59 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested the change to the object's permissions."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested the change to the object's permissions."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal Logon ID usable to correlate this event with recent events containing the same value."
+        },
+        {
+          "name": "ObjectServer",
+          "description": "Subsystem that generated the event; has the value \"Security\" for this event."
+        },
+        {
+          "name": "ObjectType",
+          "description": "Type of the object whose permissions were changed, e.g. File or Key."
+        },
+        {
+          "name": "ObjectName",
+          "description": "Name and other identifying information for the object whose permissions were changed; \"-\" for Token objects."
+        },
+        {
+          "name": "HandleId",
+          "description": "Hexadecimal handle to the object, usable for correlation with other events such as 4663."
+        },
+        {
+          "name": "OldSd",
+          "description": "Old Security Descriptor Definition Language (SDDL) value for the object before the permission change."
+        },
+        {
+          "name": "NewSd",
+          "description": "New Security Descriptor Definition Language (SDDL) value for the object after the permission change."
+        },
+        {
+          "name": "ProcessId",
+          "description": "Hexadecimal process ID of the process through which the permissions were changed."
+        },
+        {
+          "name": "ProcessName",
+          "description": "Full path and name of the executable for the process."
+        }
+      ]
+    }
   },
   {
     "eventId": 4672,
@@ -903,7 +1315,31 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account to which special privileges were assigned."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account to which special privileges were assigned."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal Logon ID usable to correlate this event with recent events containing the same value."
+        },
+        {
+          "name": "PrivilegeList",
+          "description": "Space-separated list of sensitive privileges assigned to the new logon, e.g. SeDebugPrivilege or SeBackupPrivilege."
+        }
+      ]
+    }
   },
   {
     "eventId": 4688,
@@ -923,7 +1359,71 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows 10 / Server 2016",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested the create-process operation (the process creator)."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested the create-process operation."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the subject (process creator) account."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with the creator's logon session."
+        },
+        {
+          "name": "TargetUserSid",
+          "description": "SID of the target account, included when the process creator and target run under different logon sessions."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the target account associated with the new process."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the target account."
+        },
+        {
+          "name": "TargetLogonId",
+          "description": "Hexadecimal logon ID of the target account's logon session."
+        },
+        {
+          "name": "NewProcessId",
+          "description": "Hexadecimal process ID assigned to the newly created process."
+        },
+        {
+          "name": "NewProcessName",
+          "description": "Full path and file name of the executable for the newly created process."
+        },
+        {
+          "name": "TokenElevationType",
+          "description": "Indicates whether the new process token is a full, elevated, or limited/UAC-filtered token."
+        },
+        {
+          "name": "ProcessId",
+          "description": "Hexadecimal process ID of the creator process that launched the new process."
+        },
+        {
+          "name": "CommandLine",
+          "description": "Executable name and arguments passed to the new process; empty unless command-line auditing is enabled via Group Policy."
+        },
+        {
+          "name": "ParentProcessName",
+          "description": "Full path and file name of the executable for the process that created (spawned) the new process."
+        },
+        {
+          "name": "MandatoryLabel",
+          "description": "SID of the mandatory integrity label (e.g., low, medium, high, system) assigned to the new process."
+        }
+      ]
+    }
   },
   {
     "eventId": 4689,
@@ -1003,7 +1503,35 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested the create-scheduled-task operation."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested the create-scheduled-task operation."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the subject account."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with the subject's logon session."
+        },
+        {
+          "name": "TaskName",
+          "description": "Name and path of the newly created scheduled task within the Task Scheduler Library."
+        },
+        {
+          "name": "TaskContent",
+          "description": "XML content defining the configuration of the newly created scheduled task."
+        }
+      ]
+    }
   },
   {
     "eventId": 4699,
@@ -1103,7 +1631,43 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that made the change to the local audit policy."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that made the change to the local audit policy."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the subject account."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with the subject's logon session."
+        },
+        {
+          "name": "CategoryId",
+          "description": "Name of the top-level audit policy category containing the subcategory that was changed."
+        },
+        {
+          "name": "SubcategoryId",
+          "description": "Name of the specific audit policy subcategory that was changed."
+        },
+        {
+          "name": "SubcategoryGuid",
+          "description": "Unique GUID identifying the audit policy subcategory that was changed."
+        },
+        {
+          "name": "AuditPolicyChanges",
+          "description": "The specific change(s) applied to the subcategory's auditing setting, such as Success added/removed or Failure added/removed."
+        }
+      ]
+    }
   },
   {
     "eventId": 4720,
@@ -1123,7 +1687,111 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested the create-user-account operation."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested the create-user-account operation."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the subject account."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with the subject's logon session."
+        },
+        {
+          "name": "TargetSid",
+          "description": "SID of the newly created user account."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name (sAMAccountName-style) of the user account that was created."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name to which the newly created account belongs."
+        },
+        {
+          "name": "SamAccountName",
+          "description": "Pre-Windows 2000 (SAM) logon name assigned to the new user account."
+        },
+        {
+          "name": "DisplayName",
+          "description": "Display name attribute of the new user account, as shown in the address book."
+        },
+        {
+          "name": "UserPrincipalName",
+          "description": "Internet-style logon name (UPN) of the new account, typically matching its email name."
+        },
+        {
+          "name": "HomeDirectory",
+          "description": "Path configured as the user's home directory."
+        },
+        {
+          "name": "HomePath",
+          "description": "Drive letter mapped to the UNC path specified by the account's home directory attribute."
+        },
+        {
+          "name": "ScriptPath",
+          "description": "Path to the account's logon script."
+        },
+        {
+          "name": "ProfilePath",
+          "description": "Path configured for the account's user profile."
+        },
+        {
+          "name": "UserWorkstations",
+          "description": "List of NetBIOS or DNS computer names from which the user is permitted to log on."
+        },
+        {
+          "name": "PasswordLastSet",
+          "description": "Timestamp of the last time the account's password was modified; shows <never> for manually created accounts."
+        },
+        {
+          "name": "AccountExpires",
+          "description": "Date on which the account expires."
+        },
+        {
+          "name": "PrimaryGroupId",
+          "description": "Relative Identifier (RID) of the new user object's primary group, typically 513 (Domain Users/Users)."
+        },
+        {
+          "name": "AllowedToDelegateTo",
+          "description": "List of Service Principal Names to which this account is permitted to present delegated credentials."
+        },
+        {
+          "name": "OldUacValue",
+          "description": "Previous UserAccountControl value; always 0x0 for a newly created account."
+        },
+        {
+          "name": "NewUacValue",
+          "description": "New hexadecimal UserAccountControl (SAM) bitmask controlling password, lockout, enable/disable, script, and other account behavior."
+        },
+        {
+          "name": "UserAccountControl",
+          "description": "Decoded, human-readable list of the UAC flags corresponding to the New UAC Value bitmask (e.g., account disabled, password not required)."
+        },
+        {
+          "name": "UserParameters",
+          "description": "Dial-in and related settings for the account; shows <value changed, but not displayed> when modified via Active Directory Users and Computers."
+        },
+        {
+          "name": "SidHistory",
+          "description": "Previous SIDs retained for the account if it was migrated from another domain."
+        },
+        {
+          "name": "LogonHours",
+          "description": "Hours during which the account is permitted to log on to the domain."
+        }
+      ]
+    }
   },
   {
     "eventId": 4722,
@@ -1183,7 +1851,39 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that attempted to reset the target account's password."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that attempted to reset the target account's password."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the subject account."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with the subject's logon session."
+        },
+        {
+          "name": "TargetSid",
+          "description": "SID of the account for which the password reset was requested."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account for which the password reset was requested."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the target account."
+        }
+      ]
+    }
   },
   {
     "eventId": 4725,
@@ -1283,7 +1983,51 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested the add-member-to-group operation."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested the add-member-to-group operation."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the subject account."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with the subject's logon session."
+        },
+        {
+          "name": "MemberSid",
+          "description": "SID of the account that was added to the group."
+        },
+        {
+          "name": "MemberName",
+          "description": "Distinguished name of the account that was added to the group; shows \"-\" for local groups or well-known security principals."
+        },
+        {
+          "name": "TargetSid",
+          "description": "SID of the group to which the new member was added."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the group to which the new member was added."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the group to which the new member was added."
+        },
+        {
+          "name": "PrivilegeList",
+          "description": "List of user privileges used during the operation; shows \"-\" if not captured."
+        }
+      ]
+    }
   },
   {
     "eventId": 4733,
@@ -1323,7 +2067,115 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested the user account change."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested the user account change."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the subject account."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with a corresponding logon event."
+        },
+        {
+          "name": "TargetSid",
+          "description": "SID of the account that was changed."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account that was changed."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Domain or computer name of the target account that was changed."
+        },
+        {
+          "name": "SamAccountName",
+          "description": "New value of the sAMAccountName (pre-Windows 2000 logon name) attribute if it was changed."
+        },
+        {
+          "name": "DisplayName",
+          "description": "New value of the displayName attribute (name shown in the address book) if it was changed."
+        },
+        {
+          "name": "UserPrincipalName",
+          "description": "New value of the userPrincipalName attribute (internet-style login name) if it was changed."
+        },
+        {
+          "name": "HomeDirectory",
+          "description": "New value of the homeDirectory attribute (user's home directory path) if it was changed."
+        },
+        {
+          "name": "HomePath",
+          "description": "New value of the homeDrive attribute (drive letter mapped to the home directory UNC path) if it was changed."
+        },
+        {
+          "name": "ScriptPath",
+          "description": "New value of the scriptPath attribute (path to the account's logon script) if it was changed."
+        },
+        {
+          "name": "ProfilePath",
+          "description": "New value of the profilePath attribute (path to the account's profile) if it was changed."
+        },
+        {
+          "name": "UserWorkstations",
+          "description": "New value of the userWorkstations attribute (comma-separated list of computers the user can log on from) if it was changed."
+        },
+        {
+          "name": "PasswordLastSet",
+          "description": "New value of the pwdLastSet attribute, showing the last time the account's password was modified."
+        },
+        {
+          "name": "AccountExpires",
+          "description": "New value of the accountExpires attribute, showing the date the account expires."
+        },
+        {
+          "name": "PrimaryGroupId",
+          "description": "New Relative Identifier (RID) of the user's primary group if the primaryGroupID attribute was changed."
+        },
+        {
+          "name": "AllowedToDelegateTo",
+          "description": "New list of Service Principal Names (SPNs) to which this account can present delegated credentials, from the msDS-AllowedToDelegateTo attribute."
+        },
+        {
+          "name": "OldUacValue",
+          "description": "Previous value of the SAM account flags controlling password, lockout, and enable/disable behavior for the account."
+        },
+        {
+          "name": "NewUacValue",
+          "description": "New value of the SAM account flags controlling password, lockout, and enable/disable behavior for the account, if changed."
+        },
+        {
+          "name": "UserAccountControl",
+          "description": "List of changes made to the userAccountControl attribute, shown as one line of text per change."
+        },
+        {
+          "name": "UserParameters",
+          "description": "Indicates that a Dial-in tab setting was changed, shown as \"<value changed, but not displayed>\"."
+        },
+        {
+          "name": "SidHistory",
+          "description": "New value of the sIDHistory attribute, containing previous SIDs retained when the object was moved from another domain."
+        },
+        {
+          "name": "LogonHours",
+          "description": "New value of the logonHours attribute, specifying the hours the account is allowed to log on to the domain."
+        },
+        {
+          "name": "PrivilegeList",
+          "description": "List of user privileges (e.g., SeBackupPrivilege) used during the operation, if captured."
+        }
+      ]
+    }
   },
   {
     "eventId": 4740,
@@ -1343,7 +2195,39 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that performed the lockout operation (typically the SYSTEM account)."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that performed the lockout operation."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Domain or computer name of the account that performed the lockout operation."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with a corresponding logon event."
+        },
+        {
+          "name": "TargetSid",
+          "description": "SID of the account that was locked out."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account that was locked out."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Name of the computer from which the logon attempts that caused the lockout originated (documented as \"Caller Computer Name\" despite the XML field name)."
+        }
+      ]
+    }
   },
   {
     "eventId": 4756,
@@ -1419,7 +2303,107 @@
       "domain-controller"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2016",
+      "fields": [
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account for which the TGT was requested; computer account names end with $."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Name of the Kerberos realm (domain) that the account belongs to."
+        },
+        {
+          "name": "TargetSid",
+          "description": "SID of the account for which the TGT was requested; shown as NULL SID on failure events."
+        },
+        {
+          "name": "AccountSupportedEncryptionTypes",
+          "description": "Hexadecimal and string values of the requesting account's MsDs-SupportedEncryptionTypes attribute as stored in Active Directory."
+        },
+        {
+          "name": "AccountAvailableKeys",
+          "description": "List of encryption keys available for the requesting account, generated during password sets/changes."
+        },
+        {
+          "name": "ServiceName",
+          "description": "Name of the service in the Kerberos realm to which the TGT request was sent, typically \"krbtgt\"."
+        },
+        {
+          "name": "ServiceSid",
+          "description": "SID of the service account (typically krbtgt) to which the TGT request was sent; shown as NULL SID on failure events."
+        },
+        {
+          "name": "ServiceSupportedEncryptionTypes",
+          "description": "Hexadecimal and string values of the service account's MsDs-SupportedEncryptionTypes attribute as stored in Active Directory."
+        },
+        {
+          "name": "ServiceAvailableKeys",
+          "description": "List of encryption keys available for the service account, generated during password sets/changes."
+        },
+        {
+          "name": "DCSupportedEncryptionTypes",
+          "description": "Hexadecimal and string values of the domain controller's MsDs-SupportedEncryptionTypes attribute, based on its Kerberos encryption policy."
+        },
+        {
+          "name": "DCAvailableKeys",
+          "description": "List of encryption keys available for the domain controller, generated during password sets/changes and DCPROMO."
+        },
+        {
+          "name": "IpAddress",
+          "description": "IP address of the computer from which the TGT request was received."
+        },
+        {
+          "name": "IpPort",
+          "description": "Source port number of the client's TGT request connection; 0 for local requests."
+        },
+        {
+          "name": "ClientAdvertizedEncryptionTypes",
+          "description": "List of encryption types the Kerberos client advertised support for as part of the request."
+        },
+        {
+          "name": "TicketOptions",
+          "description": "Hexadecimal set of Kerberos ticket flags requested (e.g., Forwardable, Renewable, Canonicalize)."
+        },
+        {
+          "name": "Status",
+          "description": "Hexadecimal result code of the TGT issue operation, where 0x0 indicates success."
+        },
+        {
+          "name": "TicketEncryptionType",
+          "description": "Cryptographic suite used for the issued TGT."
+        },
+        {
+          "name": "SessionKeyEncryptionType",
+          "description": "Cryptographic suite used for the session key in the issued TGT."
+        },
+        {
+          "name": "PreAuthType",
+          "description": "Code number identifying the pre-authentication type used in the TGT request."
+        },
+        {
+          "name": "PreAuthEncryptionType",
+          "description": "Encryption type selected for the pre-authentication flow."
+        },
+        {
+          "name": "CertIssuerName",
+          "description": "Name of the Certification Authority that issued the smart card certificate used for authentication."
+        },
+        {
+          "name": "CertSerialNumber",
+          "description": "Serial number of the smart card certificate used for authentication."
+        },
+        {
+          "name": "CertThumbprint",
+          "description": "Thumbprint of the smart card certificate used for authentication."
+        },
+        {
+          "name": "ResponseTicket",
+          "description": "Hash of the ticket the domain controller returned to the client as part of the response."
+        }
+      ]
+    }
   },
   {
     "eventId": 4769,
@@ -1437,7 +2421,95 @@
       "domain-controller"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2016",
+      "fields": [
+        {
+          "name": "TargetUserName",
+          "description": "User Principal Name-format account name of the requester that requested the service ticket, optionally empty."
+        },
+        {
+          "name": "TargetDomainName",
+          "description": "Name of the Kerberos realm (domain) that the requesting account belongs to."
+        },
+        {
+          "name": "LogonGuid",
+          "description": "GUID used to correlate this event with logon events on the target computer for which the ticket was issued."
+        },
+        {
+          "name": "AccountSupportedEncryptionTypes",
+          "description": "Hexadecimal and string values of the requesting account's MsDs-SupportedEncryptionTypes attribute as stored in Active Directory."
+        },
+        {
+          "name": "AccountAvailableKeys",
+          "description": "List of encryption keys available for the requesting account, generated during password sets/changes."
+        },
+        {
+          "name": "ServiceName",
+          "description": "Name of the account or computer for which the service ticket was requested, optionally empty."
+        },
+        {
+          "name": "ServiceSid",
+          "description": "SID of the account or computer object for which the service ticket was requested; NULL SID on failure events."
+        },
+        {
+          "name": "ServiceSupportedEncryptionTypes",
+          "description": "Hexadecimal and string values of the service account's MsDs-SupportedEncryptionTypes attribute as stored in Active Directory."
+        },
+        {
+          "name": "ServiceAvailableKeys",
+          "description": "List of encryption keys available for the service account, generated during password sets/changes."
+        },
+        {
+          "name": "DCSupportedEncryptionTypes",
+          "description": "Hexadecimal and string values of the domain controller's MsDs-SupportedEncryptionTypes attribute, based on its Kerberos encryption policy."
+        },
+        {
+          "name": "DCAvailableKeys",
+          "description": "List of encryption keys available for the domain controller, generated during password sets/changes and DCPROMO."
+        },
+        {
+          "name": "IpAddress",
+          "description": "IP address of the computer from which the TGS (service ticket) request was received."
+        },
+        {
+          "name": "IpPort",
+          "description": "Source port number of the client's TGS request connection; 0 for local requests."
+        },
+        {
+          "name": "ClientAdvertizedEncryptionTypes",
+          "description": "List of encryption types the Kerberos client advertised support for as part of the request."
+        },
+        {
+          "name": "TicketOptions",
+          "description": "Hexadecimal set of Kerberos ticket flags requested (e.g., Forwardable, Renewable, Canonicalize)."
+        },
+        {
+          "name": "TicketEncryptionType",
+          "description": "Cryptographic suite used for the issued service (TGS) ticket."
+        },
+        {
+          "name": "SessionKeyEncryptionType",
+          "description": "Cryptographic suite used for the session key in the issued ticket."
+        },
+        {
+          "name": "Status",
+          "description": "Hexadecimal failure code of the TGS issue operation, where 0x0 indicates success (documented as \"Failure Code\")."
+        },
+        {
+          "name": "TransmittedServices",
+          "description": "List of Service Principal Names requested when constrained Kerberos delegation was used."
+        },
+        {
+          "name": "RequestTicketHash",
+          "description": "Hash of the ticket the client sent to the domain controller as part of the Kerberos request."
+        },
+        {
+          "name": "ResponseTicketHash",
+          "description": "Hash of the ticket the domain controller returned to the client as part of the response."
+        }
+      ]
+    }
   },
   {
     "eventId": 4771,
@@ -1455,7 +2527,55 @@
       "domain-controller"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008",
+      "fields": [
+        {
+          "name": "TargetSid",
+          "description": "SID of the account for which the TGT was requested."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account for which the TGT was requested; computer account names end with $."
+        },
+        {
+          "name": "ServiceName",
+          "description": "Name of the service in the Kerberos realm to which the TGT request was sent, typically krbtgt/DOMAIN_NAME."
+        },
+        {
+          "name": "IpAddress",
+          "description": "IP address of the computer from which the TGT request was received."
+        },
+        {
+          "name": "IpPort",
+          "description": "Source port number of the client's TGT request connection; 0 for local requests."
+        },
+        {
+          "name": "TicketOptions",
+          "description": "Hexadecimal set of Kerberos ticket flags requested (e.g., Forwardable, Renewable, Canonicalize)."
+        },
+        {
+          "name": "Status",
+          "description": "Hexadecimal failure code of the failed TGT issue operation as defined in RFC 4120 (documented as \"Failure Code\")."
+        },
+        {
+          "name": "PreAuthType",
+          "description": "Code identifying the pre-authentication type used in the TGT request."
+        },
+        {
+          "name": "CertIssuerName",
+          "description": "Name of the Certification Authority that issued the smart card certificate; always empty for this event."
+        },
+        {
+          "name": "CertSerialNumber",
+          "description": "Serial number of the smart card certificate; always empty for this event."
+        },
+        {
+          "name": "CertThumbprint",
+          "description": "Thumbprint of the smart card certificate; always empty for this event."
+        }
+      ]
+    }
   },
   {
     "eventId": 4776,
@@ -1475,7 +2595,27 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "PackageName",
+          "description": "Name of the authentication package used for credential validation, always MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 for this event."
+        },
+        {
+          "name": "TargetUserName",
+          "description": "Name of the account whose credentials were validated by the authentication package (documented as \"Logon Account\")."
+        },
+        {
+          "name": "Workstation",
+          "description": "Name of the computer from which the logon attempt originated (documented as \"Source Workstation\")."
+        },
+        {
+          "name": "Status",
+          "description": "Hexadecimal error code for failure events, or 0x0 for success events (documented as \"Error Code\")."
+        }
+      ]
+    }
   },
   {
     "eventId": 4778,
@@ -2517,7 +3657,55 @@
       "certificate-authority"
     ],
     "requiredSubcategory": "",
-    "schema": null
+    "schema": {
+      "minVersion": "Windows Server 2008, Windows Vista",
+      "fields": [
+        {
+          "name": "SubjectUserSid",
+          "description": "SID of the account that requested access to the network share object."
+        },
+        {
+          "name": "SubjectUserName",
+          "description": "Name of the account that requested access to the network share object."
+        },
+        {
+          "name": "SubjectDomainName",
+          "description": "Subject's domain or computer name."
+        },
+        {
+          "name": "SubjectLogonId",
+          "description": "Hexadecimal logon ID that can be used to correlate this event with other events containing the same Logon ID, such as event 4624."
+        },
+        {
+          "name": "ObjectType",
+          "description": "The type of object that was accessed during the operation; always \"File\" for this event."
+        },
+        {
+          "name": "IpAddress",
+          "description": "Source IP address from which access was performed (IPv6, ::ffff:IPv4, or ::1/127.0.0.1 for localhost)."
+        },
+        {
+          "name": "IpPort",
+          "description": "Source TCP or UDP port used from the remote or local machine to request access; 0 for local access attempts."
+        },
+        {
+          "name": "ShareName",
+          "description": "Name of the accessed network share, in the format \\\\*\\SHARE_NAME."
+        },
+        {
+          "name": "ShareLocalPath",
+          "description": "Full system (NTFS) path for the accessed share, in the format \\??\\PATH; can be empty."
+        },
+        {
+          "name": "AccessMask",
+          "description": "Sum of the hexadecimal values of the requested access rights; always \"0x1\" for this event."
+        },
+        {
+          "name": "AccessList",
+          "description": "List of access rights requested by the Subject's Security ID; always \"ReadData (or ListDirectory)\" for this event."
+        }
+      ]
+    }
   },
   {
     "eventId": 5141,
