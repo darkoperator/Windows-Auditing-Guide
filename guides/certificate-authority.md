@@ -27,7 +27,7 @@ Alongside the `auditpol` subcategories, [`settings/registry-settings.csv`](../se
 - PowerShell Module Logging and Script Block Logging (`EnableModuleLogging`, `ModuleNames = *`, `EnableScriptBlockLogging`)
 - Including the command line in process creation events (`ProcessCreationIncludeCmdLine_Enabled`) — without this, event 4688 shows the process image but not its arguments
 - Forcing subcategory audit policy to override legacy category-level policy (`SCENoApplyLegacyAuditPolicy`)
-- Application, Security, and System event log maximum size (4 GB) and retention (do not overwrite) — the source GPO guide for this role recommends an 8 GB Security log specifically, larger than the 4 GB baseline in this repo's shared registry data; size the Security log up from the baseline value on CAs if local retention matters more than forwarding cadence.
+- Application, Security, and System event log maximum size (4 GB) and retention (do not overwrite) — the source GPO guide for this role recommends an 8 GB Security log specifically, larger than the 4 GB baseline in this repo's shared registry data; size the Security log up from the baseline value on CAs if local retention matters more than forwarding cadence. **Caution:** "do not overwrite" stops all new event logging once the log fills, regardless of how large it's sized — only apply this value where a forwarding or archival process is already in place; otherwise treat event 1104 (Security log full) as an early warning to widen the log or intervene before it goes silent.
 
 See [`settings/README.md`](../settings/README.md) for exactly how to apply either file (`auditpol /restore`, `reg.exe`/`Set-ItemProperty`, or the GPMC fallback).
 
